@@ -14,7 +14,7 @@ const productsRouter = require('./routes/products');
 // Middleware
 app.use(express.json());
 
-// roUtes
+// routes
 app.get('/', (req, res) => {
   res.send('<h1>Store API</h1><a href="api/v1/products">Products</a>');
 })
