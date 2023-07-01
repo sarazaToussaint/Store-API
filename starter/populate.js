@@ -6,6 +6,7 @@ const Product = require('./models/product');
 const jsonProduct = require('./products');
 
 const start = async () => {
+  
   try {
     await connectDB(process.env.MONGO_URI);
     console.log('Success!!!');
