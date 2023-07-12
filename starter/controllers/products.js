@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 
 const getAllProductsStatic = async (req, res) => {
-  const products = await Product.find({ name: 'accent chai' });
+  const products = await Product.find({ name: 'accent' });
   res.status(200).json({ products, nbHits: products.length });
 }
 
@@ -18,7 +18,7 @@ const getAllProducts = async (req, res) => {
   if(name){
     queryObject.name = name
   }
-  
+
   console.log(queryObject);
   const products = await Product.find(queryObject);
   res.status(200).json({ products, nbHits: products.length });
